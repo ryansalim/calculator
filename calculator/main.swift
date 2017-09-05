@@ -8,5 +8,12 @@
 
 import Foundation
 
-print("Hello, World!")
+print("Income:")
 
+if let income = readLine() {
+    
+    let tax = (Double(income) ?? 0) * 0.1
+    print("Tax: \(tax)")
+    print("Your nett income is: \((Double(income) ?? 0) - tax)")
+    
+}
