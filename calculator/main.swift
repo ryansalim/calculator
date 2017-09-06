@@ -12,8 +12,10 @@ print("Income:")
 
 if let income = readLine() {
     
-    let tax = (Double(income) ?? 0) * 0.1
-    print("Tax: \(tax)")
-    print("Your nett income is: \((Double(income) ?? 0) - tax)")
+    let tax = readLine() ?? ""
+    let doubleTax = Double(tax) ?? 0
+    let totalTax = (Double(income) ?? 0) * doubleTax
+    print("Tax: \(totalTax)")
+    print("Your nett income is: \((Double(income) ?? 0) - totalTax)")
     
 }
